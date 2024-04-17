@@ -1,6 +1,6 @@
 pkgbase = open-numismat-git
 	pkgdesc = Application to create, organize and manage coin catalogue
-	pkgver = 1.9.6.r57.gcda96bbd
+	pkgver = 1.9.7.r21.gc93fc015
 	pkgrel = 1
 	url = https://opennumismat.github.io/open-numismat/
 	arch = any
@@ -17,6 +17,7 @@ pkgbase = open-numismat-git
 	depends = python-openpyxl
 	depends = python-pillow
 	depends = python-zxing-cpp-bin
+	depends = qt6-charts
 	source = open-numismat-git::git+https://github.com/OpenNumismat/open-numismat.git#branch=master
 	source = https://github.com/OpenNumismat/YearCalculator.git
 	source = https://github.com/OpenNumismat/open-numismat/releases/download/1.9.5/open-numismat_1.9.5_all.deb

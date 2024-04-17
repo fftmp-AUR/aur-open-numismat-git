@@ -2,14 +2,14 @@
 
 pkgname=open-numismat-git
 tag_ver=1.9.5
-pkgver=1.9.6.r57.gcda96bbd
+pkgver=1.9.7.r21.gc93fc015
 pkgrel=1
 pkgdesc='Application to create, organize and manage coin catalogue'
 arch=('any')
 url="https://opennumismat.github.io/open-numismat/"
 license=('GPL-3.0-only')
 makedepends=('git' 'python-setuptools')
-depends=('pyside6' 'python-dateutil' 'python-jinja' 'python-imagehash' 'python-lxml' 'python-numpy' 'python-opencv' 'python-openpyxl' 'python-pillow' 'python-zxing-cpp-bin')
+depends=('pyside6' 'python-dateutil' 'python-jinja' 'python-imagehash' 'python-lxml' 'python-numpy' 'python-opencv' 'python-openpyxl' 'python-pillow' 'python-zxing-cpp-bin' 'qt6-charts')
 source=("${pkgname}::git+https://github.com/OpenNumismat/open-numismat.git#branch=master"
         "https://github.com/OpenNumismat/YearCalculator.git"
         "https://github.com/OpenNumismat/open-numismat/releases/download/${tag_ver}/open-numismat_${tag_ver}_all.deb")
