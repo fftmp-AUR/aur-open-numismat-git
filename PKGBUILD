@@ -1,8 +1,8 @@
 # Maintainer: fft
 
 pkgname=open-numismat-git
-tag_ver=1.9.5
-pkgver=1.9.7.r21.gc93fc015
+tag_ver=1.9.10
+pkgver=1.9.10.r19.g32b032e9
 pkgrel=1
 pkgdesc='Application to create, organize and manage coin catalogue'
 arch=('any')
@@ -15,7 +15,7 @@ source=("${pkgname}::git+https://github.com/OpenNumismat/open-numismat.git#branc
         "https://github.com/OpenNumismat/open-numismat/releases/download/${tag_ver}/open-numismat_${tag_ver}_all.deb")
 sha256sums=('SKIP'
             'SKIP'
-            'c419e9c480f13b74b008780dc97db3dbf991145266c435ef00e84cd7559e13b7')
+            'afb640a9d93464b85a6e4cdf9ea28c3d726a672cb610ebd2821966ec100d3521')
 
 pkgver() {
   cd ${pkgname}
@@ -34,7 +34,9 @@ build() {
   tar -xf './data.tar.zst' './opt/venvs/open-numismat/lib/python3.10/site-packages/OpenNumismat/private_keys.py'
   mv './opt/venvs/open-numismat/lib/python3.10/site-packages/OpenNumismat/private_keys.py' './'
 
-  cd ${pkgname}
+  cd "${pkgname}/tools"
+  python build_resources.py
+  cd ..
   python setup.py build
 }
 
